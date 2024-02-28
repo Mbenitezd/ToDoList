@@ -1,0 +1,76 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: gray;
+}
+
+.toDo-container{
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 400px;
+    border-radius: 8px;
+}
+
+.toDo-container input[type="text"],
+.toDo-container button{
+    display: block;
+    margin: 10px auto;
+}
+
+.toDo-container input[type="text"]{
+    width: calc(100% - 80px);
+    padding: 10px;
+    border: 1px lightgray;
+    border-radius: 4px;
+}
+
+.toDo-container button{
+    width: 80px;
+    padding: 10px;
+    background-color: blue;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+}
+
+.input{
+    display: flex;
+    align-items: center;
+}
+
+.item{
+    font-family: Arial, Helvetica, sans-serif;
+    color:white;
+    border: 2px solid rgb(25, 115, 145);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: rgb(121, 160, 173);
+    border-radius: 4px;
+    position: relative;
+}
+
+li.item .delete-btn{
+    font-size: 25px;
+    position: absolute;
+    top: 25%;
+    right: 8px;
+    transform: translateY(-50%);
+    background-color: rgb(121, 160, 173);
+    color: rgb(25, 115, 145);
+    border: none;
+    padding: 4px 8px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.completed{
+    background-color: lightgreen;
+}
+
+ul{
+    list-style-type: none;
+    padding: 0;
+}
