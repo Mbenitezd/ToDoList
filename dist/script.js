@@ -18,7 +18,7 @@ function renderItems() {
             deleteBtn.textContent = 'X';
             deleteBtn.className = 'delete-btn';
             deleteBtn.addEventListener('click', function () {
-                var confirmDelete = confirm('OK = delete | Cancel = abort operation');
+                var confirmDelete = confirm('Are you sure to delete the item?');
                 if (confirmDelete) {
                     deleteItem(item.id);
                 }
@@ -43,6 +43,10 @@ function setupItemEventListeners(itemId) {
     }
 }
 function addItem(text) {
+    if (text.trim() === "") {
+        alert('Value cannot be empty.');
+        return;
+    }
     if (text.length < 4) {
         alert('Value must be greater than 3 characters.');
         return;
